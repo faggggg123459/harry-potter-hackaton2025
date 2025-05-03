@@ -9,6 +9,10 @@
     z-index: -2;
 }
 
+h1, p, h2 {
+    text-align: center;
+}
+
 /* 🔄 Анімація фону */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
@@ -25,9 +29,6 @@
     z-index: -1;
 }
 
-h1, p, h2 {
-    text-align: center;
-}
 
 /* 🌟 Виправлення верхньої білої смуги */
 header {
