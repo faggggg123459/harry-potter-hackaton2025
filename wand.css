@@ -11,7 +11,9 @@
 
 h1, p, h2 {
     text-align: center;
+     color: #DB7093;
 }
+
 
 /* 🔄 Анімація фону */
 @keyframes gradientAnimation {
