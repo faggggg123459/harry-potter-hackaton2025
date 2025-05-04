@@ -1,0 +1,150 @@
+/* 🌟 Переливчастий магічний фон */
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #301934, #5C2A69, #8A2BE2, #DA70D6);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s infinite alternate ease-in-out;
+    z-index: -2;
+}
+
+
+h1, p, h2 {
+    text-align: center;
+     color: #DB7093;
+}
+
+/* 🔄 Анімація фону */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 💫 Магічні частинки */
+.particles-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ✨ Оформлення магічних частинок */
+.magic-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #FFD700, #A020F0);
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px #DA70D6;
+    opacity: 0.9;
+    animation: flicker 3s infinite alternate, moveParticles 6s infinite ease-in-out;
+    transition: 6s ease-in-out;
+}
+
+/* 🔮 Ефект мерехтіння */
+@keyframes flicker {
+    0% { opacity: 0.5; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.3); }
+}
+
+/* 🎭 Анімація руху частинок */
+@keyframes moveParticles {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-50px); }
+}
+
+/* 🔥 Магічні кнопки */
+.catalog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.catalog-btn {
+    padding: 16px 30px;
+    background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 0px 15px #A020F0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.catalog-btn:hover {
+    background: #A020F0;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 25px #FFD700;
+}
+
+/* 🏰 Оформлення блоків заклинань */
+.spell-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.spell-card {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 25px #8A2BE2;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.spell-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px #DA70D6;
+}
+
+/* 🌀 Стиль магічних фактів */
+.fact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.magic-fact {
+    width: 300px;
+    padding: 20px;
+    background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 0px 20px #A020F0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.magic-fact:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px #FFD700;
+}
+
+/* 🌟 Виправлення бічних смуг */
+body {
+    overflow-x: hidden; /* Забороняє горизонтальну прокрутку */
+    margin: 0;
+    padding: 0;
+}
+
+/* 📜 Виправлення ширини контейнера */
+.container {
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 🏰 Вирівнювання блоків */
+section {
+    width: 90%;
+    margin: auto;
+}
