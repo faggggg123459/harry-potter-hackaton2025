@@ -1,0 +1,136 @@
+/* 🔮 Виправлення бічної полоси */
+body {
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, p, h2 {
+    text-align: center;
+     color: #DB7093;
+}
+
+/* 🌟 Магічний фон */
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #301934, #5C2A69, #8A2BE2, #DA70D6);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s infinite alternate ease-in-out;
+    z-index: -2;
+}
+
+/* 💫 Магічні частинки */
+.particles-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ✨ Оформлення магічних частинок */
+.magic-particle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #FFD700, #A020F0);
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px #DA70D6;
+    opacity: 0.9;
+    animation: flicker 3s infinite alternate, moveParticles 6s infinite ease-in-out;
+    transition: 6s ease-in-out;
+}
+
+/* 🔮 Кнопки каталогу */
+.catalog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.catalog-btn {
+    padding: 16px 30px;
+    background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 0px 20px #A020F0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.catalog-btn:hover {
+    background: #A020F0;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 30px #FFD700;
+}
+
+/* 🏰 Оформлення блоків факультетів */
+.house-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 35px #8A2BE2;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.house-container:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 40px #DA70D6;
+}
+
+/* 📜 Магічні факти */
+.fact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.magic-fact {
+    width: 320px;
+    padding: 22px;
+    background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+    color: white;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0px 0px 25px #A020F0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.magic-fact:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 30px #FFD700;
+}
+
+/* 🌟 Виправлення бічних смуг */
+body {
+    overflow-x: hidden; /* Забороняє горизонтальну прокрутку */
+    margin: 0;
+    padding: 0;
+}
+
+/* 📜 Виправлення ширини контейнера */
+.container {
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 🏰 Вирівнювання блоків */
+section {
+    width: 90%;
+    margin: auto;
+}
+
