@@ -1,0 +1,217 @@
+/* 🌟 Загальний стиль */
+body {
+    background-color: #1C1C1C;
+    color: white;
+    font-family: "Cinzel", serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, p, h2 {
+    text-align: center;
+     color: #C71585;
+}
+
+
+/* 🔮 Магічний фон */
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #301934, #5C2A69, #8A2BE2);
+    z-index: -2;
+}
+
+/* 💫 Магічні частинки */
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.magic-particle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #8A2BE2, #DA70D6);
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px #DA70D6;
+    opacity: 0.9;
+    animation: flicker 3s infinite alternate, moveParticles 6s infinite ease-in-out;
+    transition: 6s ease-in-out;
+}
+
+/* 🔥 Магічні кнопки */
+.catalog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.catalog-btn {
+    padding: 16px 30px;
+    background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 0px 20px #A020F0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.catalog-btn:hover {
+    background: #A020F0;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 30px #FFD700;
+}
+
+/* 🏆 Оформлення блоків */
+.info-container, .team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 35px #8A2BE2;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.info-container:hover, .team-container:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 40px #DA70D6;
+}
+
+/* ✨ Магічні факти */
+.fact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.magic-fact {
+    width: 320px;
+    padding: 22px;
+    background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+    color: white;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0px 0px 25px #A020F0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.magic-fact:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 30px #FFD700;
+}
+
+/* Основний стиль для фактичних блоків і подяки */
+.fact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.magic-fact {
+  width: 320px;
+  padding: 22px;
+  background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+  color: white;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0px 0px 25px #A020F0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.magic-fact:hover {
+  transform: scale(1.06);
+  box-shadow: 0px 0px 30px #FFD700;
+}
+
+/* Спеціальні стилі для секції Подяки */
+.thanks-container {
+  background: linear-gradient(45deg, #DA70D6, #8A2BE2);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 40px #FFD7;
+  margin-top: 20px;
+}
+
+.final-thankyou {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #DB7093;
+  font-style: italic;
+}
+
+/* Основний стиль для фактичних блоків і подяки */
+.fact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.magic-fact {
+  width: 320px;
+  padding: 22px;
+  background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+  color: white;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0px 0px 25px #A020F0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.magic-fact:hover {
+  transform: scale(1.06);
+  box-shadow: 0px 0px 30px #FFD700;
+}
+
+/* Спеціальні стилі для секції Подяки */
+.thanks-container {
+  background: linear-gradient(45deg, #DA70D6, #8A2BE2);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 40px #FFD700;
+  margin-top: 20px;
+}
+
+.final-thankyou {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #DB7093;
+  font-style: italic;
+}
+
+/* Стилізація фінального тексту подяки */
+.final-thankyou {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #2e004f; /* темно-фіолетовий, більш насичений колір */
+  font-style: italic;
+  padding: 15px;
+  border-top: 2px dashed #2e004f;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.final-thankyou:hover {
+  transform: scale(1.03);
+}
