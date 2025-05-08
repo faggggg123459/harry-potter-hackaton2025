@@ -21,6 +21,60 @@
     <header class="magic-hover">
       🧙‍♂️ Магічний Світ Гаррі Поттера
     </header>
+
+    <style>
+    .neon-btn {
+  /* Базовий вигляд кнопки */
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(45deg, #8A2BE2, #DA70D6);
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+  /* Додаткове світіння тексту */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.neon-btn:hover {
+  /* Збільшення і посилення ефекту неону при наведенні */
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(218, 112, 214, 0.8), 0 0 30px rgba(138, 43, 226, 0.8);
+}
+
+/* Псевдоелемент для додаткового «пульсуючого» ефекту */
+.neon-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%);
+  background-size: 50px 50px;
+  z-index: -1;
+  opacity: 0.6;
+  animation: slide 4s linear infinite;
+}
+
+/* Анімація для плавного руху фону псевдоелемента */
+@keyframes slide {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+      
+    </style>
     
     <a href="svit.html" class="neon-btn">🧙‍♂️ Про світ</a>
 
