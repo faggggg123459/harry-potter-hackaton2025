@@ -1,212 +1,245 @@
-/* Каталог - стилізація вікон */
-.catalog-grid,
-.character-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-/* Переливчастий синьо-фіолетовий фон */
-.background-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(45deg, #2e2b5f, #46356a, #6e44b8, #8a2be2);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s infinite alternate ease-in-out;
-  z-index: -1;
-}
-
-/* Анімація фону */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Основні стилі */
 body {
-  font-family: "Cinzel Decorative", cursive;
-  color: white;
-  text-align: center;
   margin: 0;
-  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* Неонові кнопки */
-.neon-btn {
-  display: inline-block;
-  padding: 15px 30px;
-  background: #a020f0;
-  border: none;
-  font-size: 20px;
-  color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  text-decoration: none;
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s;
-  margin-bottom: 30px; /* Збільшення простору */
-}
-
-.neon-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 20px #a020f0;
-}
-
-/* Магічні заголовки */
-.magic-title {
-  font-size: 28px;
-  color: #da70d6;
-  text-shadow: 0px 0px 15px #a020f0;
-}
-
-/* Магічні частинки */
-.particles-container {
+canvas#particles, .stars, .fog {
   position: fixed;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.magic-particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #a020f0;
-  border-radius: 50%;
-  box-shadow: 0px 0px 15px #da70d6;
-  opacity: 0.8;
-  transition: 4s ease-in-out;
-}
-
-/* Прибираємо білу полосу */
-header {
-  margin-top: -25px;
-}
-
-/* Контейнер частинок */
-.particles-container {
-  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
-/* Магічні частинки */
-.magic-particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #a020f0;
-  border-radius: 50%;
-  box-shadow: 0px 0px 30px #da70d6;
-  opacity: 0.8;
-  animation: flicker 3s infinite alternate;
-  transition: 6s ease-in-out;
+.light-mode {
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  color: #000;
 }
 
-/* Ефект мерехтіння */
-@keyframes flicker {
-  0% {
-    opacity: 0.5;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
-
-/* Магічний список */
-.magic-list {
-  list-style-type: none;
-  padding: 0;
-  font-size: 18px;
-}
-
-.magic-list li {
-  padding: 10px;
-  margin-bottom: 5px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px #a020f0;
-}
-
-/* Контакти */
-.contact-link {
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.contact-link:hover {
-  text-shadow: 0px 0px 10px #ffd700;
-}
-
-/* Стилізація нижньої частини */
-#story,
-#facts,
-#contacts {
-  margin-top: 50px;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
-  box-shadow: 0px 0px 25px #8a2be2;
-}
-
-.catalog-item,
-.character-card {
-  width: 250px;
-  margin: 15px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 25px #8a2be2;
-  transition: transform 0.3s ease-in-out;
+header {
+  font-family: 'Cinzel Decorative', cursive;
   text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+  background: rgba(0,0,0,0.6);
+  color: gold;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-.catalog-item img,
-.character-card img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px #a020f0;
-}
-
-.catalog-item:hover,
-.character-card:hover {
-  transform: scale(1.05);
-}
-
-/* Магічні кнопки вікон */
-.catalog-btn {
-  display: block;
-  padding: 12px 20px;
-  background: #a020f0;
+#toggle-theme {
+  margin-top: 1rem;
+  font-size: 1rem;
+  background: gold;
+  color: #000;
   border: none;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+
+.intro, .faq, .plot, .facts {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  position: relative;
+}
+
+.intro h2, .faq h2, .plot h2, .facts h2 {
+  color: gold;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.catalog-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: gold;
+  color: #000;
   text-decoration: none;
-  margin-top: 10px;
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .catalog-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 20px #da70d6;
+  background-color: #ffea00;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.wand-effect {
+  width: 100px;
+  height: 100px;
+  border: 5px solid gold;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Зірки */
+.star {
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.3); }
+}
+
+/* Туман */
+.fog-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.05), transparent);
+  animation: fogMove 40s linear infinite;
+  z-index: 1;
+}
+
+@keyframes fogMove {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+body.light-mode {
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  color: #000;
+}
+
+body.light-mode .card,
+body.light-mode .intro,
+body.light-mode .faq,
+body.light-mode .plot,
+body.light-mode .facts {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+body.light-mode .catalog-btn {
+  background-color: #000;
+  color: gold;
+}
+
+body.light-mode .catalog-btn:hover {
+  background-color: #333;
+}
+
+.site-footer {
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+  color: #f0e6d2;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  border-top: 2px solid #666;
+}
+
+.site-footer.light-mode {
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  color: #2b2b2b;
+  border-top: 2px solid #ccc;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li a {
+  color: #f0e6d2;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.site-footer.light-mode .social-links li a {
+  color: #2c2c2c;
+}
+
+.social-links li a:hover {
+  color: #d4af37;
+}
+
+.site-footer .copyright {
+  font-size: 14px;
+  opacity: 0.7;
 }
