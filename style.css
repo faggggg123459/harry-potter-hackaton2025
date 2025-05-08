@@ -59,6 +59,7 @@ body {
 }
 
 
+
 canvas#particles, .stars, .fog {
   position: fixed;
   top: 0;
